@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kareem Mohamed - Developer Portfolio</title>
+    <title>Kareem Mohamed — Software Engineer & Cloud Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+
+    <!-- Animated background -->
+    <div class="bg-grid"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <header id="header">
         <nav class="container">
             <div class="logo">
-                <a href="#home">&lt;Kareem/&gt;</a>
+                <a href="#home"><span class="logo-bracket">&lt;</span>KM<span class="logo-bracket">/&gt;</span></a>
             </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -26,145 +31,342 @@
                 </li>
             </ul>
             <div class="hamburger">
-                <i class="fas fa-bars"></i>
+                <span></span><span></span><span></span>
             </div>
         </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="hero container">
-            <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Kareem Mohamed</span></h1>
-                <h2>Software Developer</h2>
-                <p>I build clean, responsive, and user-friendly web applications.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        <section id="home" class="hero">
+            <div class="container hero-inner">
+                <div class="hero-label">
+                    <span class="dot"></span> Available for work
                 </div>
+                <h1 class="hero-name">
+                    <span class="line">Kareem</span>
+                    <span class="line accent">Mohamed</span>
+                </h1>
+                <div class="hero-roles">
+                    <span class="role-chip"><i class="fas fa-code"></i> ASP.NET Core</span>
+                    <span class="role-chip"><i class="fab fa-aws"></i> AWS Cloud</span>
+                    <span class="role-chip"><i class="fas fa-mobile-alt"></i> Flutter</span>
+                </div>
+                <p class="hero-sub">Software Engineer & Cloud Developer crafting production-ready backends, mobile apps, and cloud infrastructure — security-first, always.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="mailto:Kareemmoursy75432@gmail.com" class="btn btn-ghost">
+                        <span>Hire Me</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num">3+</span>
+                        <span class="stat-label">Projects Live</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">2</span>
+                        <span class="stat-label">AWS Certs</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">B.Sc.</span>
+                        <span class="stat-label">Systems Eng.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-hint">
+                <i class="fas fa-chevron-down"></i>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="about container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Hello! I'm Kareem, a passionate software developer who loves turning complex problems into simple, beautiful, and intuitive designs.</p>
-                    <p>When I'm not coding, I enjoy learning about new technologies and building projects that challenge me.</p>
-                    
-                    <h3>My Skills</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Git & GitHub</span>
-                        <span class="skill-tag">Responsive Design</span>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">01 / About</span>
+                    <h2 class="section-title">Who I Am</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>I'm a Software Engineer from Egypt, currently based in Saudi Arabia, and fresh out of Al-Azhar University with a B.Sc. in Systems & Computers Engineering (Very Good with Honors, July 2025).</p>
+                        <p>My work lives at the intersection of backend architecture, cloud infrastructure, and mobile — I build things that are production-ready from day one, with a security-first mindset.</p>
+                        <p>Whether it's an ASP.NET Core API deployed on Railway, a Flutter app backed by Firebase, or an AWS architecture leveraging Lambda & DynamoDB — I focus on solving real architectural problems, not just surface bugs.</p>
+                        <div class="about-links">
+                            <a href="https://github.com/Kimoo193" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://linkedin.com/in/kareem-mohamed-1409b223b" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                    <div class="skills-panel">
+                        <div class="skill-group">
+                            <h4><i class="fas fa-server"></i> Backend</h4>
+                            <div class="skill-chips">
+                                <span>ASP.NET Core</span>
+                                <span>C#</span>
+                                <span>EF Core</span>
+                                <span>REST APIs</span>
+                                <span>Node.js</span>
+                                <span>JWT Auth</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4><i class="fab fa-aws"></i> Cloud & DevOps</h4>
+                            <div class="skill-chips">
+                                <span>AWS EC2</span>
+                                <span>S3</span>
+                                <span>Lambda</span>
+                                <span>RDS</span>
+                                <span>VPC</span>
+                                <span>CloudFormation</span>
+                                <span>Route 53</span>
+                                <span>DynamoDB</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4><i class="fas fa-mobile-alt"></i> Mobile</h4>
+                            <div class="skill-chips">
+                                <span>Flutter</span>
+                                <span>Dart</span>
+                                <span>Firebase</span>
+                                <span>Hive</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4><i class="fas fa-database"></i> Database</h4>
+                            <div class="skill-chips">
+                                <span>SQL Server</span>
+                                <span>SQLite</span>
+                                <span>Firestore</span>
+                                <span>DynamoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Strip -->
+        <section class="certs-strip">
+            <div class="container">
+                <div class="certs-grid">
+                    <a href="https://credly.com/go/MmWfqmIl" target="_blank" class="cert-card">
+                        <i class="fab fa-aws"></i>
+                        <div>
+                            <span class="cert-name">AWS Cloud Architecting</span>
+                            <span class="cert-date">Mar 2026 · 60hr</span>
+                        </div>
+                    </a>
+                    <a href="https://credly.com/go/Rq7MM5vT" target="_blank" class="cert-card">
+                        <i class="fab fa-aws"></i>
+                        <div>
+                            <span class="cert-name">AWS Cloud Foundations</span>
+                            <span class="cert-date">Feb 2026 · 20hr</span>
+                        </div>
+                    </a>
+                    <div class="cert-card">
+                        <i class="fab fa-js"></i>
+                        <div>
+                            <span class="cert-name">JavaScript — Frontend Masters</span>
+                            <span class="cert-date">Dec 2024</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <span class="cert-name">DEPI .NET Web Development</span>
+                            <span class="cert-date">Apr 2024</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="experience container">
-            <h2 class="section-title">Experience & Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Freelance Web Developer</h3>
-                        <span class="timeline-date">2023 - Present</span>
-                        <p>Building responsive websites for local businesses, improving their online presence and accessibility.</p>
-                    </div>
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">02 / Experience</span>
+                    <h2 class="section-title">Background</h2>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Computer Science Degree</h3>
-                        <span class="timeline-date">University Name</span>
-                        <p>Focusing on software engineering principles, algorithms, and web development technologies.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>B.Sc. Systems & Computers Engineering</h3>
+                                <span class="timeline-badge">Education</span>
+                            </div>
+                            <span class="timeline-date"><i class="fas fa-calendar"></i> Jul 2025 · Al-Azhar University, Cairo</span>
+                            <p>Graduated with Very Good with Honors distinction. Graduation project: a full-stack platform built with 4 teammates — Node.js/Express backend, React.js frontend, and Flutter mobile app.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>AWS Cloud Training — NTI Creativa Innovation Hubs</h3>
+                                <span class="timeline-badge">Training</span>
+                            </div>
+                            <span class="timeline-date"><i class="fas fa-calendar"></i> Jan – Mar 2026 · 120hrs</span>
+                            <p>Covered AWS Foundations, Core Services, Security, Architecting, Cloud Economics, and Solutions Architect Associate content. Completed 9 AWS Academy labs with perfect scores. Assessed at ~85–89% overall AWS competency.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>DEPI .NET Web Development Bootcamp</h3>
+                                <span class="timeline-badge">Training</span>
+                            </div>
+                            <span class="timeline-date"><i class="fas fa-calendar"></i> 2024 · Cairo</span>
+                            <p>Intensive bootcamp covering C#, ASP.NET MVC, SQL Server, and software engineering principles. Capstone: Airline Booking Website built with ASP.NET MVC.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="projects container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>E-Commerce Landing Page</h3>
-                        <p>A fully responsive landing page for a fictional online store with a clean UI.</p>
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">03 / Projects</span>
+                    <h2 class="section-title">What I've Built</h2>
+                </div>
+                <div class="projects-grid">
+
+                    <div class="project-card featured">
+                        <div class="project-glow"></div>
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-download"></i></div>
+                            <div class="project-links">
+                                <a href="https://videodownloader-production-d6c2.up.railway.app" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/Kimoo193/VideoDownloader" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <div class="project-badge">Live on Railway</div>
+                        <h3>Video Downloader API</h3>
+                        <p>Production-ready ASP.NET Core 9 backend with SHA256 device fingerprinting, JWT auth, and support for YouTube, TikTok, Instagram, Facebook, SoundCloud & Spotify. Serves CDN links for quality-selected downloads (2160p down to MP3).</p>
+                        <div class="project-tech">
+                            <span>ASP.NET Core 9</span>
+                            <span>C#</span>
+                            <span>SQLite</span>
+                            <span>JWT</span>
+                            <span>yt-dlp</span>
+                            <span>Railway</span>
                         </div>
                     </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Weather App</h3>
-                        <p>A weather dashboard that fetches real-time data using a public REST API.</p>
-                        <div class="project-tech">
-                            <span>JavaScript</span>
-                            <span>Fetch API</span>
-                            <span>CSS</span>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-boxes"></i></div>
+                            <div class="project-links">
+                                <a href="https://github.com/Kimoo193" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <h3>Karam Stock</h3>
+                        <p>Flutter Android inventory management app with offline-first architecture. Features Firebase Auth + Firestore, Hive local storage, role-based access (SuperAdmin/Admin/User), multi-tenant support, Excel import/export, and custom image cropping.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Firebase</span>
+                            <span>Hive</span>
+                            <span>Excel</span>
                         </div>
                     </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Task Tracker</h3>
-                        <p>A productivity app that lets users add, delete, and mark tasks as complete, saving to local storage.</p>
-                        <div class="project-tech">
-                            <span>Vanilla JS</span>
-                            <span>DOM Manipulation</span>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-plane"></i></div>
+                            <div class="project-links">
+                                <a href="https://github.com/Kimoo193/AirLine-Booking-Site" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        <h3>Airline Booking Website</h3>
+                        <p>Full-stack ASP.NET MVC web application for flight booking, built as a capstone project. Includes user authentication, flight search, seat selection, and booking management.</p>
+                        <div class="project-tech">
+                            <span>ASP.NET MVC</span>
+                            <span>C#</span>
+                            <span>SQL Server</span>
+                            <span>Bootstrap</span>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-            
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-btn">
-                    <i class="fas fa-envelope"></i> Email Me
-                </a>
-                <a href="https://github.com/yourusername" target="_blank" class="contact-btn">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-btn">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-inner">
+                    <div class="section-header left">
+                        <span class="section-tag">04 / Contact</span>
+                        <h2 class="section-title">Let's Talk</h2>
+                    </div>
+                    <p class="contact-sub">I'm actively seeking new opportunities as a .NET Developer or Software Engineer. If you have a role that fits, I'd love to hear from you.</p>
+                    <div class="contact-grid">
+                        <a href="mailto:Kareemmoursy75432@gmail.com" class="contact-card primary">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">Kareemmoursy75432@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/kareem-mohamed-1409b223b" target="_blank" class="contact-card">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">kareem-mohamed-1409b223b</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Kimoo193" target="_blank" class="contact-card">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">github.com/Kimoo193</span>
+                            </div>
+                        </a>
+                        <div class="contact-card">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+20 106 358 2529</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Kareem Mohamed. Built with HTML, CSS & JS.</p>
+            <div class="footer-inner">
+                <span class="logo-small"><span class="logo-bracket">&lt;</span>KM<span class="logo-bracket">/&gt;</span></span>
+                <p>&copy; 2025 Kareem Mohamed. Built with HTML, CSS & JS.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Kimoo193" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/kareem-mohamed-1409b223b" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 

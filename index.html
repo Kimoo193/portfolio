@@ -65,8 +65,8 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-num">5+</span>
-                        <span class="stat-label">Projects Live</span>
+                        <span class="stat-num">14</span>
+                        <span class="stat-label">Projects Built</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat">
@@ -115,6 +115,8 @@
                                 <span>EF Core</span>
                                 <span>REST APIs</span>
                                 <span>Node.js</span>
+                                <span>NestJS</span>
+                                <span>SignalR</span>
                                 <span>JWT Auth</span>
                             </div>
                         </div>
@@ -129,6 +131,9 @@
                                 <span>CloudFormation</span>
                                 <span>Route 53</span>
                                 <span>DynamoDB</span>
+                                <span>Docker</span>
+                                <span>Cloudflare</span>
+                                <span>Render</span>
                             </div>
                         </div>
                         <div class="skill-group">
@@ -138,12 +143,16 @@
                                 <span>Dart</span>
                                 <span>Firebase</span>
                                 <span>Hive</span>
+                                <span>WebRTC</span>
                             </div>
                         </div>
                         <div class="skill-group">
                             <h4><i class="fas fa-database"></i> Database</h4>
                             <div class="skill-chips">
                                 <span>SQL Server</span>
+                                <span>PostgreSQL</span>
+                                <span>MySQL</span>
+                                <span>Redis</span>
                                 <span>SQLite</span>
                                 <span>Firestore</span>
                                 <span>DynamoDB</span>
@@ -272,6 +281,139 @@
                             <span>JWT</span>
                             <span>yt-dlp</span>
                             <span>Railway</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-hospital-user"></i></div>
+                            <div class="project-links"></div>
+                        </div>
+                        <div class="project-badge">New</div>
+                        <h3>ClinicQueue</h3>
+                        <p>Multi-tenant clinic queue platform. Patients book and track their live position, reception handles arrival numbering, urgent cases and day close, and doctors can pause the queue. Modular monolith with real-time SignalR updates, Hangfire jobs, and integration tests on Testcontainers.</p>
+                        <div class="project-tech">
+                            <span>ASP.NET Core 10</span>
+                            <span>PostgreSQL</span>
+                            <span>Redis</span>
+                            <span>SignalR</span>
+                            <span>React 19</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-utensils"></i></div>
+                            <div class="project-links"></div>
+                        </div>
+                        <div class="project-badge">New</div>
+                        <h3>ServeFlow POS</h3>
+                        <p>Multi-tenant POS for restaurants, cafes and cloud kitchens. Tenants are isolated by PostgreSQL Row-Level Security. Covers the full order lifecycle, a live kitchen display (KDS) over SignalR, cashier billing and receipts, and a manager console for menus, floors, staff and permissions.</p>
+                        <div class="project-tech">
+                            <span>.NET</span>
+                            <span>Clean Architecture</span>
+                            <span>PostgreSQL RLS</span>
+                            <span>SignalR</span>
+                            <span>Angular</span>
+                            <span>JWT</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="project-links"></div>
+                        </div>
+                        <div class="project-badge">New</div>
+                        <h3>Irtaqi LMS</h3>
+                        <p>Arabic RTL learning platform built on one core that serves schools, universities, training centers and solo teachers. A single user account can belong to several institutions. Tenant isolation runs through AsyncLocalStorage and a Prisma client extension, with JWT in HttpOnly cookies.</p>
+                        <div class="project-tech">
+                            <span>NestJS</span>
+                            <span>TypeScript</span>
+                            <span>Prisma</span>
+                            <span>MySQL</span>
+                            <span>React + Vite</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-truck-fast"></i></div>
+                            <div class="project-links">
+                                <a href="https://kiaandelivery.com" target="_blank" rel="noopener" title="Live Site"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-badge">Live on Cloudflare</div>
+                        <h3><a href="https://kiaandelivery.com/" target="_blank" rel="noopener">Kiaan Delivery</a></h3>
+                        <p class="project-url"><a href="https://kiaandelivery.com/" target="_blank" rel="noopener">kiaandelivery.com</a></p>
+                        <p>Client website for a delivery company: an Arabic RTL static site with an SEO article page, WebP images, a sitemap and manifest, and security headers. A Python build script generates the pages. Hosted on Cloudflare Pages.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Python</span>
+                            <span>Cloudflare Pages</span>
+                            <span>SEO</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-phone-volume"></i></div>
+                            <div class="project-links"></div>
+                        </div>
+                        <h3>AL Moursy Call</h3>
+                        <p>Free, self-hosted family voice and video calling app. It uses one WebRTC engine with two signaling paths: local Wi-Fi and a remote VPS. Built to run on low-end Android phones, with no third-party accounts and no subscriptions.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>WebRTC</span>
+                            <span>Docker</span>
+                            <span>Nginx</span>
+                            <span>VPS</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-circle-down"></i></div>
+                            <div class="project-links"></div>
+                        </div>
+                        <h3>VidSave Offline</h3>
+                        <p>Flutter video downloader that runs with no backend. Downloads happen on-device with a local SQLite history, notifications, guest Instagram access, and automatic daily yt-dlp updates. Includes a small admin dashboard.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>SQLite</span>
+                            <span>yt-dlp</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-wifi"></i></div>
+                            <div class="project-links"></div>
+                        </div>
+                        <h3>LinkTag</h3>
+                        <p>NFC sharing app: write any URL (like a portfolio page) to an NFC tag, and anyone can tap it to open the link without installing an app. Has a QR code fallback, local-only storage and favorites.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>NFC</span>
+                            <span>QR</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-terminal"></i></div>
+                            <div class="project-links"></div>
+                        </div>
+                        <h3>rtlpty</h3>
+                        <p>Node.js PTY proxy that reorders and shapes Arabic and other RTL text for interactive terminal apps in terminals without bidi support, such as Warp, while keeping the wrapped app interactive. Built to make Claude Code readable in Arabic.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>PTY</span>
+                            <span>Unicode Bidi</span>
+                            <span>CLI</span>
                         </div>
                     </div>
 
@@ -419,7 +561,7 @@
         <div class="container">
             <div class="footer-inner">
                 <span class="logo-small"><span class="logo-bracket">&lt;</span>KM<span class="logo-bracket">/&gt;</span></span>
-                <p>&copy; 2025 Kareem Mohamed. Built with HTML, CSS & JS.</p>
+                <p>&copy; 2026 Kareem Mohamed. Built with HTML, CSS & JS.</p>
                 <div class="footer-links">
                     <a href="https://github.com/Kimoo193" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/kareem-mohamed-1409b223b" target="_blank"><i class="fab fa-linkedin"></i></a>
